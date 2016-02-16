@@ -107,37 +107,49 @@
 	  render: function render() {
 	    var styles = {
 	      uList: {
-	        listStyleType: 'none'
+	        listStyleType: 'none',
+	        marginLeft: '50%'
 	      }
 	    };
 	    var chatsList = this.state.chats.map(function (chat, index) {
 	      return _react2.default.createElement(
-	        'ul',
-	        { style: styles.uList },
-	        _react2.default.createElement(
-	          'li',
-	          { key: index },
-	          chat.val.text
-	        )
+	        'li',
+	        { style: styles.uList, key: index },
+	        chat.val.text
 	      );
 	    });
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'text-center' },
-	      _react2.default.createElement('br', null),
-	      this.state.clicked ? _react2.default.createElement('img', { src: 'reactjs.png' }) : null,
+	      { className: 'container-fluid' },
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        chatsList
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-6' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            chatsList
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-6' },
+	          this.state.clicked ? _react2.default.createElement('img', { src: 'reactjs.png' }) : null
+	        )
 	      ),
 	      _react2.default.createElement('br', null),
-	      _react2.default.createElement('input', { style: styles.inputStyle, onChange: this.handleChange, onKeyDown: this.handleSubmit }),
 	      _react2.default.createElement(
-	        'button',
-	        { className: 'btn btn-primary', onClick: this.handleClick },
-	        'Click Me!'
+	        'div',
+	        { className: 'text-center' },
+	        _react2.default.createElement('input', { style: styles.inputStyle, onChange: this.handleChange, onKeyDown: this.handleSubmit }),
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'btn btn-primary', onClick: this.handleClick },
+	          'Click Me!'
+	        )
 	      )
 	    );
 	  }

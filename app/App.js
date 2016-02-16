@@ -48,25 +48,31 @@ const App = React.createClass({
   render() {
     const styles = {
       uList: {
-        listStyleType: 'none'
+        listStyleType: 'none',
+        marginLeft: '50%'
       }
     };
     const chatsList = this.state.chats.map((chat, index) => {
       return (
-        <ul style={styles.uList}>
-          <li key={index}>{chat.val.text}</li>
-        </ul>
+        <li style={styles.uList} key={index}>{chat.val.text}</li>
       )
     });
     return (
-      <div className="text-center">
+      <div className="container-fluid">
         <br/>
-        {this.state.clicked ? <img src="reactjs.png"/> : null}
+        <div className="row">
+          <div className="col-md-6">
+            <h1>{chatsList}</h1>
+          </div>
+          <div className="col-md-6">
+            {this.state.clicked ? <img src="reactjs.png"/> : null}
+          </div>
+        </div>
         <br/>
-        <h1>{chatsList}</h1>
-        <br/>
-        <input style={styles.inputStyle} onChange={this.handleChange} onKeyDown={this.handleSubmit}/>
-        <button className="btn btn-primary" onClick={this.handleClick}>Click Me!</button>
+        <div className="text-center">
+          <input style={styles.inputStyle} onChange={this.handleChange} onKeyDown={this.handleSubmit}/>
+          <button className="btn btn-primary" onClick={this.handleClick}>Click Me!</button>
+        </div>
       </div>
     )
   }
