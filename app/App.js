@@ -48,8 +48,7 @@ const App = React.createClass({
   render() {
     const styles = {
       uList: {
-        listStyleType: 'none',
-        marginLeft: '50%'
+        listStyleType: 'none'
       }
     };
     const chatsList = this.state.chats.map((chat, index) => {
@@ -61,12 +60,14 @@ const App = React.createClass({
       <div className="container-fluid">
         <br/>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-3"></div>
+          <div className="col-md-3">
             <h1>{chatsList}</h1>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-3">
             {this.state.clicked ? <img src="reactjs.png"/> : null}
           </div>
+          <div className="col-md-3"></div>
         </div>
         <br/>
         <div className="text-center">

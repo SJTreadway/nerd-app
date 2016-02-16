@@ -107,8 +107,7 @@
 	  render: function render() {
 	    var styles = {
 	      uList: {
-	        listStyleType: 'none',
-	        marginLeft: '50%'
+	        listStyleType: 'none'
 	      }
 	    };
 	    var chatsList = this.state.chats.map(function (chat, index) {
@@ -125,9 +124,10 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
+	        _react2.default.createElement('div', { className: 'col-md-3' }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-md-6' },
+	          { className: 'col-md-3' },
 	          _react2.default.createElement(
 	            'h1',
 	            null,
@@ -136,9 +136,10 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-md-6' },
+	          { className: 'col-md-3' },
 	          this.state.clicked ? _react2.default.createElement('img', { src: 'reactjs.png' }) : null
-	        )
+	        ),
+	        _react2.default.createElement('div', { className: 'col-md-3' })
 	      ),
 	      _react2.default.createElement('br', null),
 	      _react2.default.createElement(
