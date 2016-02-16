@@ -60,8 +60,14 @@
 	  displayName: 'App',
 	  getInitialState: function getInitialState() {
 	    return {
-	      text: ''
+	      text: '',
+	      clicked: false
 	    };
+	  },
+	  displayImage: function displayImage() {
+	    this.setState({
+	      clicked: !this.state.clicked
+	    });
 	  },
 	  onChange: function onChange(e) {
 	    this.setState({
@@ -71,13 +77,24 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      { className: 'text-center' },
 	      _react2.default.createElement(
 	        'h1',
 	        null,
 	        this.state.text
 	      ),
-	      _react2.default.createElement('input', { onKeyUp: this.onChange })
+	      _react2.default.createElement('br', null),
+	      this.state.clicked ? _react2.default.createElement('img', { src: 'reactjs.png' }) : null,
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('input', { onKeyUp: this.onChange }),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('br', null),
+	      _react2.default.createElement(
+	        'button',
+	        { onClick: this.displayImage, className: 'btn btn-primary' },
+	        'Click me'
+	      )
 	    );
 	  }
 	});
