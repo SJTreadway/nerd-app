@@ -1,6 +1,8 @@
+import Firebase from 'firebase';
+
 module.exports = {
-  addUser(req, res) {
-    console.log('User Added!');
+  addChat(req, res) {
+    console.log('Chat Added!');
     return res.json(req.body);
   }
 };

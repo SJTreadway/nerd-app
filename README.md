@@ -1,3 +1,5 @@
 NERD app
 
-NodeJS, ExpressJS, ReactJS, and MySQL DB
+Brushing up on ReactJS
+
+NodeJS, ExpressJS, ReactJS, and Firebase

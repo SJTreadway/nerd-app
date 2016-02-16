@@ -43,9 +43,10 @@
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "firebase": "^2.3.2",
+    "firebase": "^2.4.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.5",
-    "react-router": "^1.0.3"
+    "react-router": "^1.0.3",
+    "reactfire": "^0.6.0"
   }
 }
